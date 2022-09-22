@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Toll Management Applications</header>
+    <hrgray" />
+    <main id="mainsection">
+      <div id="functionality">
+        <div id="leftfunctionality">
+          <h2>Toll entries/Vehicle entries</h2>
+          <h6>|</h6>
+          <select name="Filter Toll" id="tollfilter">
+            <option value="All">All</option>
+            <option value="Chengalpattu">Chengalpattu</option>
+            <option value="Kappalur">Kappalur</option>
+          </select>
+          <input
+            type="text"
+            id="filterVehicleByNumber"
+            placeholder="Filter Vehicle By Number"
+          />
+        </div>
+        <div id="rightfunctionality">
+          <button id="addvehicle">Add vehicle entry</button>
+          <button id="addtoll">Add new toll</button>
+          <button>View all tolls</button>
+        </div>
+      </div>
+      <table id="table">
+        <thead>
+          <tr>
+            <th scope="col">VEHICLE TYPE</th>
+            <th scope="col">VEHICLE NUMBER</th>
+            <th scope="col">DATE/TIME</th>
+            <th scope="col">TOLL NAME</th>
+            <th scope="col">TARIFF</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr data-tollName="Chengalpattu">
+            <th scope="row">Car</th>
+            <td>TN24AQ4644</td>
+            <td>09/04/12</td>
+            <td>Chengalpattu</td>
+            <td>50</td>
+          </tr>
+          <tr data-tollName="Chengalpattu">
+            <th scope="row">Truck</th>
+            <td>TN24AQ4643</td>
+            <td>09/04/12</td>
+            <td>Chengalpattu</td>
+            <td>70</td>
+          </tr>
+          <tr data-tollName="Kappalur">
+            <th scope="row">Jeep</th>
+            <td>TN24AQ4642</td>
+            <td>09/04/12</td>
+            <td>Kappalur</td>
+            <td>60</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <div id="popupformVehicle">
+      <div id="heading">Add new entry</div>
+      <div id="closepopup">x</div>
+      <form id="addnewentry">
+        <div>
+          <label>Select Vehicle Type</label>
+          <select name="vehicleName" id="selectVehicle" name="selectVehicle1">
+            <option value="" disabled selected hidden>
+              Select vehicle type
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+        </div>
+        <div>
+          <label for="inputPassword4">Vehicle Number</label>
+          <input
+            type="text"
+            placeholder="Enter your Vehicle Number"
+            id="vehicleNumber"
+          />
+        </div>
+        <div>
+          <label for="inputAddress">Tariff</label>
+          <input type="text" placeholder="Tariff Amount" id="Tariff" />
+        </div>
+        <div>
+          <button type="submit">Add Entry</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="popupformToll">
+      <div id="heading">Add new toll</div>
+      <div id="closepopuptoll">x</div>
+      <form id="addnewtoll">
+        <div>
+          <label>Toll Name</label>
+          <input
+            name="tollName"
+            type="text"
+            placeholder="Enter toll name"
+            id="tollName"
+          />
+        </div>
+        <h2>vehicle fare details</h2>
+        <div>
+          <label>Select Vehicle Type</label>
+          <select name="vehicleName" id="selectVehicle" name="selectVehicle1">
+            <option value="" disabled selected hidden>
+              Select vehicle type
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+          <div>
+            <input
+              type="text"
+              placeholder="Single Journey"
+              id="SingleJourneyPrice"
+              name="SingleJourneyPrice1"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Return Journey"
+              id="ReturnJourneyPrice"
+              name="ReturnJourneyPrice1"
+            />
+          </div>
+        </div>
+        <div>
+          <label>Select Vehicle Type</label>
+          <select name="vehicleName" id="selectVehicle" name="selectVehicle2">
+            <option value="" disabled selected hidden>
+              Select vehicle type
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+          <div>
+            <input
+              type="text"
+              placeholder="Single Journey"
+              id="SingleJourneyPrice"
+              name="SingleJourneyPrice2"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Return Journey"
+              id="ReturnJourneyPrice"
+              name="ReturnJourneyPrice2"
+            />
+          </div>
+        </div>
+        <div>
+          <label>Select Vehicle Type</label>
+          <select name="vehicleName" id="selectVehicle" name="selectVehicle3">
+            <option value="" disabled selected hidden>
+              Select vehicle type
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+          <div>
+            <input
+              type="text"
+              placeholder="Single Journey"
+              id="SingleJourneyPrice"
+              name="SingleJourneyPrice3"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Return Journey"
+              id="ReturnJourneyPrice"
+              name="ReturnJourneyPrice3"
+            />
+          </div>
+        </div>
+        <div>
+          <label>Select Vehicle Type</label>
+          <select name="vehicleName" id="selectVehicle" name="selectVehicle4">
+            <option value="" disabled selected hidden>
+              Select vehicle type
+            </option>
+            <option value="Car/Jeep/Van">Car/Jeep/Van</option>
+            <option value="LCV">LCV</option>
+            <option value="Truck/Bus">Truck/Bus</option>
+            <option value="Heavy vehicle">Heavy vehicle</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder="Single Journey"
+            id="SingleJourneyPrice"
+            name="SingleJourneyPrice4"
+          />
+
+          <input
+            type="text"
+            placeholder="Return Journey"
+            id="ReturnJourneyPrice"
+            name="ReturnJourneyPrice4"
+          />
+        </div>
+
+        <div>
+          <button type="submit">Add details</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
